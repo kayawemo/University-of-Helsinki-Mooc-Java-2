@@ -3,7 +3,7 @@
 public class Warehouse {
 
     private double capacity;
-    private double balance;
+    protected double balance;
 
     public Warehouse(double capacity) {
         if (capacity > 0.0) {

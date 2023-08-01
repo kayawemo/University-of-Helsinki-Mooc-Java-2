@@ -1,2 +1,22 @@
-package PACKAGE_NAME;public class ProductWarehouse {
+public class ProductWarehouse extends Warehouse{
+
+    private String name;
+
+    public ProductWarehouse (String productName, double capacity) {
+        super(capacity);
+        this.name = productName;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return name + ": " + super.toString();
+    }
 }

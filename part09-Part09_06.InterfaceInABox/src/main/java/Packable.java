@@ -1,2 +1,4 @@
-package PACKAGE_NAME;public interface Packable {
+public interface Packable {
+
+    double weight();
 }

@@ -21,10 +21,11 @@ public class BooksFromFile {
 
         try {
             Files.lines(Paths.get(file))
-                    .map(row -> row.split(";"))
+                    .map(row -> row.split(","))
                     .filter(parts -> parts.length >= 4)
                     .map(parts -> new Book(parts[0], Integer.valueOf(parts[1]), Integer.valueOf(parts[2]), parts[3]))
-                    .forEach(book -> books.add(book));
+                    .forEach(book -> books.add(book))
+                    ;
 
         } catch (IOException e) {
             throw new RuntimeException(e);

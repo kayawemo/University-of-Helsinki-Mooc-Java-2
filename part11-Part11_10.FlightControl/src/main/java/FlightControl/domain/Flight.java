@@ -2,22 +2,23 @@ package FlightControl.domain;
 
 public class Flight {
 
-    private Airpalne airpalne;
-    private Place depaturePlace;
+    private Airplane airplane;
+    private Place departurePlace;
+
     private Place arrivalPlace;
 
-    public Flight(Airpalne airpalne, Place depaturePlace, Place arrivalPlace) {
-        this.airpalne = airpalne;
-        this.depaturePlace = depaturePlace;
+    public Flight(Airplane airplane, Place departurePlace, Place arrivalPlace) {
+        this.airplane = airplane;
+        this.departurePlace = departurePlace;
         this.arrivalPlace = arrivalPlace;
     }
 
-    public Airpalne getAirpalne() {
-        return airpalne;
+    public Airplane getAirpalne() {
+        return airplane;
     }
 
     public Place getDepaturePlace() {
-        return depaturePlace;
+        return departurePlace;
     }
 
     public Place getArrivalPlace() {

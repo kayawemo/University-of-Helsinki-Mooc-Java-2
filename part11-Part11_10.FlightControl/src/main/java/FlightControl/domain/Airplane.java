@@ -1,11 +1,11 @@
 package FlightControl.domain;
 
-public class Airpalne {
+public class Airplane {
 
     private String ID;
     private int capacity;
 
-    public Airpalne(String ID, int capacity) {
+    public Airplane(String ID, int capacity) {
         this.ID = ID;
         this.capacity = capacity;
     }

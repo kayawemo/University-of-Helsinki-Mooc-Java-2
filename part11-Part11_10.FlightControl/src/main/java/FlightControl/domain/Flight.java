@@ -24,4 +24,11 @@ public class Flight {
     public Place getArrivalPlace() {
         return arrivalPlace;
     }
+
+    @Override
+    public String toString() {
+        return this.airplane.toString() + " (" + this.departurePlace + "-"
+                + this.arrivalPlace + ")";
+    }
+
 }

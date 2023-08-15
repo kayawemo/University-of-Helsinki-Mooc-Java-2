@@ -28,7 +28,7 @@ public class FlightControlLogic {
 
         // add departure ID and places to the "places" hashmap.
         this.places.putIfAbsent(departurePlaceID, new Place(departurePlaceID));
-        this.places.putIfAbsent(departurePlaceID, new Place(destinationPlaceID));
+        this.places.putIfAbsent(destinationPlaceID, new Place(destinationPlaceID));
 
         Flight flight = new Flight(plane, this.places.get(departurePlaceID), this.places.get(destinationPlaceID));
         this.flights.put(flight.toString(), flight);

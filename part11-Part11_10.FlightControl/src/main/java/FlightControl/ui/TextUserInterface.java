@@ -1,6 +1,7 @@
 package FlightControl.ui;
 
 import FlightControl.domain.Airplane;
+import FlightControl.domain.Flight;
 import FlightControl.logic.FlightControlLogic;
 
 import java.util.Scanner;
@@ -19,6 +20,52 @@ public class TextUserInterface {
     public void start() {
 
         assetControl();
+        System.out.println();
+        flightControl();
+        System.out.println();
+    }
+
+    private void flightControl() {
+
+        while (true) {
+            System.out.println("Choose an action:\n" +
+                    "[1] Print airplanes\n" +
+                    "[2] Print flights\n" +
+                    "[3] Print airplane details\n" +
+                    "[x] Quit\n" +
+                    "> ");
+
+            String input = scanner.nextLine();
+            if (input.equals("1")) {
+                printPlanes();
+            } else if (input.equals("2")) {
+                printFlight();
+            } else if (input.equals("3")) {
+                printPlaneDetails();
+            } else if (input.equals("x")) {
+                break;
+            }
+
+        }
+    }
+
+    private void printPlaneDetails() {
+        System.out.println("Give the airplane id: ");
+        Airplane plane = askForAirplane();
+        System.out.println(plane);
+
+    }
+
+    private void printFlight() {
+        for(Flight flight : controller.getFlights()) {
+            System.out.println(flight);
+        }
+    }
+
+    private void printPlanes() {
+        for (Airplane plane : controller.getPlanes()) {
+            System.out.println(plane);
+        }
     }
 
     private void assetControl() {

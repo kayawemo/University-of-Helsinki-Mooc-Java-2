@@ -3,6 +3,10 @@ package validating;
 public class Calculator {
 
     public int factorial(int num) {
+        if(num < 0) {
+            throw new IllegalArgumentException("The parameter must be a non negative number.");
+
+        }
 
         int answer = 1;
         for (int i = 1; i <= num; i++) {
@@ -12,7 +16,11 @@ public class Calculator {
         return answer;
     }
 
-    public int binomialCoefficent(int setSize, int subsetSize) {
+    public int binomialCoefficent(int setSize, int subsetSize)  {
+        if (setSize < 0 && subsetSize < 0 & subsetSize > setSize) {
+            throw new IllegalArgumentException("Parameters shuld be greater thn zero");
+
+        }
 
         int numerator = factorial(setSize);
         int denominator = factorial(subsetSize) * factorial(setSize - subsetSize);
